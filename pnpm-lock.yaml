@@ -11,6 +11,9 @@ dependencies:
   dotenv-flow:
     specifier: ^3.3.0
     version: 3.3.0
+  ts-custom-error:
+    specifier: ^3.3.1
+    version: 3.3.1
   zod:
     specifier: ^3.22.2
     version: 3.22.2
@@ -2671,6 +2674,11 @@ packages:
     dependencies:
       typescript: 5.2.2
     dev: true
+
+  /ts-custom-error@3.3.1:
+    resolution: {integrity: sha512-5OX1tzOjxWEgsr/YEUWSuPrQ00deKLh6D7OTWcvNHm12/7QPyRh8SYpyWvA4IZv8H/+GQWQEh/kwo95Q9OVW1A==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /ts-unused-exports@10.0.1(typescript@5.2.2):
     resolution: {integrity: sha512-nWG8Y96pKem01Hw4j4+Mwuy+L0/9sKT7D61Q+OS3cii9ocQACuV6lu00B9qpiPhF4ReVWw3QYHDqV8+to2wbsg==}
