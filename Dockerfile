@@ -19,4 +19,6 @@ FROM base
 COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=build /app/dist /app/dist
 EXPOSE 8000
+ARG BUILD_TAG
+ENV BUILD_TAG ${BUILD_TAG}
 CMD [ "pnpm", "start" ]
