@@ -13,7 +13,7 @@
     "lint:unused-exports": "ts-unused-exports ./tsconfig.json --maxIssues=0",
     "test": "vitest run --coverage",
     "build": "tsc",
-    "test:watch": "vitest watch",
+    "test:watch": "vitest watch --reporter=dot",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --noEmit --watch",
     "todo": "leasot 'src/**/*.ts'"
