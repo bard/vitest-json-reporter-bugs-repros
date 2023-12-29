@@ -1,9 +1,12 @@
 {
-  "name": "starter-node",
+  "name": "repro",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "repro-location-bug": "echo '### WITH JEST:'; pnpm run location-bug-jest; echo; echo '### WITH VITEST:'; pnpm run location-bug-vitest",
+    "location-bug-vitest": "vitest run --reporter=json src/location-bug/vitest.test.ts | jq .testResults[0].assertionResults[0].location",
+    "location-bug-jest": "jest --json --testLocationInResults src/location-bug/jest.test.ts 2>/dev/null | jq .testResults[0].assertionResults[0].location",
     "build": "tsc",
     "test:watch": "vitest watch --reporter=dot",
     "typecheck": "tsc --noEmit",
@@ -16,7 +19,7 @@
     "@tsconfig/node18": "^18.2.2",
     "jest": "^29.7",
     "typescript": "^5.3.3",
-    "vitest": "link:../vitest/packages/vitest"
+    "vitest": "^1.1.0"
   },
   "engines": {
     "node": ">=18"
